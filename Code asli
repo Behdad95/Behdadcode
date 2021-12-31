@@ -1,0 +1,23 @@
+if __name__ == '__main__':
+    n = int(input())
+    mylist = []
+    for i in range(n):
+        b = (input())
+        b = b.split(' ')
+        # print(b[0]+b[1]+b[2])
+        if b[0] == "insert":
+            mylist.insert(int(b[1]), b[2])
+        elif b[0] == "remove":
+            for j in mylist:
+                if j == b[1]:
+                    mylist.remove(j)
+        elif b[0] == "append":
+            mylist.append(b[1])
+        elif b[0] == "sort":
+            mylist.sort(key=int)
+        elif b[0] == "pop":
+            mylist.pop()
+        elif b[0] == "reverse":
+            mylist.reverse()
+        elif b[0] == "print":
+            print(list(map(int, mylist)))
